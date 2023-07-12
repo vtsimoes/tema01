@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Página 2 - Lista de Produtos</title>
+  <style>
+    /* Importação do Google Fonts (Roboto) */
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+    /* Definição de fonte padrão */
+    body {
+      font-family: 'Roboto', sans-serif;
+    }
+
+    /* Definição de cores */
+    :root {
+      --primary-color: #3f51b5; /* Cor primária */
+      --secondary-color: #f50057; /* Cor secundária */
+      --background-color: #f5f5f5; /* Cor de fundo */
+      --text-color: #212121; /* Cor do texto */
+    }
+
+    /* Estilização dos botões */
+    button {
+      display: inline-block;
+      border: none;
+      padding: 8px 16px;
+      background-color: var(--primary-color);
+      color: #fff;
+      font-weight: 500;
+      text-align: center;
+      text-decoration: none;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: var(--secondary-color);
+    }
+
+    /* Estilização da lista de produtos */
+    .product-list {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .product-item {
+      width: 200px;
+      margin: 10px;
+      padding: 16px;
+      border-radius: 4px;
+      background-color: #fff;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    .product-item img {
+      max-width: 100%;
+      height: auto;
+      margin-bottom: 10px;
+    }
+
+    .product-item h3 {
+      margin-top: 0;
+      margin-bottom: 10px;
+    }
+
+    .product-item p {
+      margin: 0;
+    }
+
+    /* Estilização da página */
+    body {
+      background-color: var(--background-color);
+      color: var(--text-color);
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 250vh;
+    }
+
+    .container {
+      max-width: 1000px;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 4px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    .logo {
+      max-width: 200px;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img class="logo" src="images/logo.jpg" alt="Logo da Empresa">
+    <h1>Lista de Produtos</h1>
+    <ul class="product-list">
+      <li class="product-item">
+        <img src="images/fruta01.jpg" alt="Produto 1">
+        <h3>Produto 1</h3>
+        <p>ID: 1</p>
+        <p>Preço Unitário: R$ 10.99</p>
+      </li>
+      <li class="product-item">
+        <img src="images/fruta02.jpg" alt="Produto 2">
+        <h3>Produto 2</h3>
+        <p>ID: 2</p>
+        <p>Preço Unitário: R$ 19.99</p>
+      </li>
+      <li class="product-item">
+        <img src="images/fruta03.jpg" alt="Produto 3">
+        <h3>Produto 3</h3>
+        <p>ID: 3</p>
+        <p>Preço Unitário: R$ 7.49</p>
+      </li>
+      <li class="product-item">
+        <img src="images/fruta04.jpg" alt="Produto 4">
+        <h3>Produto 4</h3>
+        <p>ID: 4</p>
+        <p>Preço Unitário: R$ 15.99</p>
+      </li>
+      <li class="product-item">
+        <img src="images/fruta05.jpg" alt="Produto 5">
+        <h3>Produto 5</h3>
+        <p>ID: 5</p>
+        <p>Preço Unitário: R$ 12.50</p>
+      </li>
+      <li class="product-item">
+        <img src="images/fruta06.jpg" alt="Produto 6">
+        <h3>Produto 6</h3>
+        <p>ID: 6</p>
+        <p>Preço Unitário: R$ 8.99</p>
+      </li>
+      <li class="product-item">
+        <img src="images/fruta07.jpg" alt="Produto 7">
+        <h3>Produto 7</h3>
+        <p>ID: 7</p>
+        <p>Preço Unitário: R$ 11.25</p>
+      </li>
+      <li class="product-item">
+        <img src="images/fruta08.jpg" alt="Produto 8">
+        <h3>Produto 8</h3>
+        <p>ID: 8</p>
+        <p>Preço Unitário: R$ 9.75</p>
+      </li>
+      <li class="product-item">
+        <img src="images/fruta09.jpg" alt="Produto 9">
+        <h3>Produto 9</h3>
+        <p>ID: 9</p>
+        <p>Preço Unitário: R$ 14.99</p>
+      </li>
+      <li class="product-item">
+        <img src="images/fruta10.jpg" alt="Produto 10">
+        <h3>Produto 10</h3>
+        <p>ID: 10</p>
+        <p>Preço Unitário: R$ 6.50</p>
+      </li>
+    </ul>
+  </div>
+</body>
+</html>

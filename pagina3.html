@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Página 3 - Redefinir Senha</title>
+  <style>
+    /* Importação do Google Fonts (Roboto) */
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+    /* Definição de fonte padrão */
+    body {
+      font-family: 'Roboto', sans-serif;
+    }
+
+    /* Definição de cores */
+    :root {
+      --primary-color: #3f51b5; /* Cor primária */
+      --secondary-color: #f50057; /* Cor secundária */
+      --background-color: #f5f5f5; /* Cor de fundo */
+      --text-color: #212121; /* Cor do texto */
+    }
+
+    /* Estilização dos botões */
+    button {
+      display: inline-block;
+      border: none;
+      padding: 8px 16px;
+      background-color: var(--primary-color);
+      color: #fff;
+      font-weight: 500;
+      text-align: center;
+      text-decoration: none;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: var(--secondary-color);
+    }
+
+    /* Estilização dos campos de entrada de texto */
+    input[type="text"] {
+      padding: 8px 12px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 14px;
+      width: 100%;
+      margin-bottom: 10px;
+    }
+
+    /* Estilização dos alertas (pop-ups) */
+    .alert {
+      padding: 12px 16px;
+      border-radius: 4px;
+      background-color: #fff;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      color: var(--text-color);
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    /* Estilização da página */
+    body {
+      background-color: var(--background-color);
+      color: var(--text-color);
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      max-width: 600px;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 4px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    .logo {
+      max-width: 200px;
+      margin-bottom: 20px;
+    }
+
+    .center {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="container center">
+    <img class="logo" src="images/logo.jpg" alt="Logo da Empresa">
+    <h1>Redefinir Senha</h1>
+    <form id="resetForm">
+      <input type="text" id="email" name="email" placeholder="Digite seu e-mail" required>
+      <button type="button" onclick="resetPassword()">Redefinir minha senha</button>
+    </form>
+  </div>
+
+  <script>
+    function resetPassword() {
+      var email = document.getElementById("email").value;
+      if (isValidEmail(email)) {
+        showPopup("Link de redefinição enviado para o e-mail informado!");
+        setTimeout(function() {
+          window.location.href = "pagina1.html"; // Substitua "pagina1.html" pelo nome correto do arquivo da página inicial
+        }, 3000);
+      } else {
+        showPopup("E-mail inválido! Por favor, digite um e-mail válido.");
+      }
+    }
+
+    function isValidEmail(email) {
+      var emailRegex = /^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]{2,7}$/;
+      return emailRegex.test(email);
+    }
+
+    function showPopup(message) {
+      var popup = document.createElement("div");
+      popup.classList.add("alert");
+      popup.innerText = message;
+      document.body.appendChild(popup);
+      setTimeout(function() {
+        popup.style.display = "none";
+      }, 3000);
+    }
+  </script>
+</body>
+</html>
