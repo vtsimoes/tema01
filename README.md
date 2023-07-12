@@ -3,7 +3,7 @@
 
 O site é de uma empresa fictícia de frutas. Contémn página de Login, listagem de produtos e página de redefinição de senha.
 
-* [pagina1.html](pagina1.html): é a página de login.
+* [index.html](index.html): é a página de login.
 
 * [pagina2.html](pagina2.html): Faz a listagem dos produtos.
 
